@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Card, Container } from './styles'
+import Menu from '../../components/Menu'
 
 function App() {
   const [templates, setTemplates] = useState([])
@@ -30,7 +31,9 @@ function App() {
 
   return (
     <>
-      <Container>
+      <Menu disabled/>
+
+      <Container className="container">
       {templates.map((template => (
         <Card className="anime" key={template.userCount}>
           <img src={template.posterImage.original} alt=""/>
