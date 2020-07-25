@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div `
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
+
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 50%;
+  width: 80%;
+  height: auto;
   padding: 3%;
-  border: 1px solid #eeef;
-  border-radius: 8px;
-  box-shadow: 1px 1px 6px 1px #eaeaeab8;
 
   margin: 5% auto;
 
   img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 
     box-shadow: 1px 1px 6px 1px #eaeaeab8;
   }
@@ -26,7 +29,21 @@ export const Container = styled.div`
 
     padding: 2vh 0;
   }
-  span {
+  h2 {
+    align-self: flex-start;
+
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+    background: #335dff;
+    color: #fff;
+
+    span {
+      font-weight: bold;
+    }
+  }
+  p {
     letter-spacing: 0.8px;
     line-height: 2.8vh;
 

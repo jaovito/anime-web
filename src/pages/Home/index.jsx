@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Container } from './styles'
+import { Card, Container } from './styles'
 
 function App() {
   const [templates, setTemplates] = useState([])
@@ -30,13 +30,16 @@ function App() {
 
   return (
     <>
+      <Container>
       {templates.map((template => (
-        <Container className="anime" key={template.userCount}>
+        <Card className="anime" key={template.userCount}>
           <img src={template.posterImage.original} alt=""/>
-          <h1>{} {template.slug}</h1>
-        <span>{template.synopsis}.</span>
-        </Container>
+          <h1>{template.canonicalTitle}</h1>
+          <h2>Rating Rank: <span>{template.ratingRank}</span></h2>
+          <p>{template.synopsis}.</p>
+        </Card>
       )))}
+      </Container>
     </>
   );
 }
