@@ -29,12 +29,12 @@ export const List = styled.div`
     align-items: flex-start;
 
     width: 70%;
-    height: 10%;
+    height: 100%;
 
     margin: 0 15px;
 
   img {
-    width: 30%;
+    height: 70%;
     border-radius: 8px 0 0 8px;
     margin-right: 1%;
     box-shadow: 1px 1px 6px 1px #eaeaeab8;
@@ -69,6 +69,8 @@ export const List = styled.div`
   p {
     letter-spacing: 0.8px;
     line-height: 2.8vh;
+
+    width: 100%;
 
   }
 
