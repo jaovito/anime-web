@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Navbar, Nav} from 'react-bootstrap'
-// import { Container } from './styles';
 
 function Menu(props) {
   return (
