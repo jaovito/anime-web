@@ -49,7 +49,7 @@ function Animes() {
                     <h1>Episódio {kimetsuEp} (PT-BR)</h1>
                     <form onSubmit={handleSubmit}>
 
-                    <input min={1} max={3} placeholder='Digite um episódio' type="number" value={inputValue}
+                    <input min={1} max={7} placeholder='Digite um episódio' type="number" value={inputValue}
                     onChange={e => setInputValue(e.target.value)}/>
 
                     <button className="btn btn-primary" type="submit">
