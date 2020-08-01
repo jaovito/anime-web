@@ -11,7 +11,11 @@ function Menu(props) {
         <Navbar.Brand >Animê</Navbar.Brand>
     <Nav className="mr-auto">
         <Nav disabled={props.disabled} ><Link className={`nav-link ${props.disabled ? 'disabled' : ''}`} to="/" >Trandings</Link></Nav>
+
         <Nav disabled={props.searchDisabled}><Link className={`nav-link ${props.searchDisabled ? 'disabled' : ''}`} to='/search'>Search</Link></Nav>
+
+        <Nav disabled={props.videoDisabled}><Link className={`nav-link ${props.videoDisabled ? 'disabled' : ''}`} to='/animes'>Animes</Link></Nav>
+
     </Nav>
   </Navbar>
       </>
