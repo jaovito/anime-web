@@ -29,6 +29,37 @@ export const Container = styled.div `
         h1 {
             align-self: center;
         }
+
+        form {
+            display: flex;
+            align-self: flex-start;
+            justify-content: center;
+
+
+            input {
+                background: #fff;
+                color: #666;
+
+                margin-right: 5px;
+                margin-bottom: 5px;
+                width: 15vw;
+                border-radius: 5px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            button {
+                margin-right: 5px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
     }
 
     section {

@@ -4,9 +4,11 @@ import Menu from '../../components/Menu'
 
 function Animes() {
     const [animes, setAnime] = useState([])
+    const [kimetsuEp, setKimetsuEp] = useState([1])
+    const [inputValue, setInputValue] = useState('')
 
 
-    const video = 'https://animesvideos.s3-sa-east-1.amazonaws.com/kimetsu-1.mp4'
+    const video = `https://animesvideos.s3-sa-east-1.amazonaws.com/kimetsu-${kimetsuEp}.mp4`
 
     useEffect(() => {
         (async() => {
@@ -18,6 +20,12 @@ function Animes() {
           setAnime(data)
         })()
       }, [])
+
+
+      function handleSubmit(e) {
+        e.preventDefault()
+        setKimetsuEp(inputValue)
+      }
 
   return (
           <>
@@ -38,7 +46,17 @@ function Animes() {
 
                     {/**anime infos and videos */}
                 <main>
-                    <h1>Episódio 1 (PT-BR)</h1>
+                    <h1>Episódio {kimetsuEp} (PT-BR)</h1>
+                    <form onSubmit={handleSubmit}>
+
+                    <input min={1} max={3} placeholder='Digite um episódio' type="number" value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}/>
+
+                    <button className="btn btn-primary" type="submit">
+                        Trocar
+                    </button>
+                    </form>
+
                 <Source url={[
                     {src: video, type: 'video/mp4'}
                     ]}
