@@ -8,7 +8,7 @@ export const Source = styled(ReactPlayer) `
     > video {
         border-radius: 10px;
         outline: 0;
-        
+        width: 100%;
         box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
     }
 `
@@ -19,6 +19,13 @@ export const Container = styled.div `
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 988px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     main {
         display: flex;
@@ -67,6 +74,16 @@ export const Container = styled.div `
         width: 30%;
         box-shadow: 1px 1px 5px rgba(0,0,0, 0.3);
         margin-bottom: 25px;
+
+        @media(max-width: 988px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 100vh;
+
+    }
     }
 
     img {
