@@ -42,6 +42,12 @@ export const Container = styled.div `
             align-self: flex-start;
             justify-content: center;
 
+            @media(max-width: 988px) {
+                display: flex;
+            align-self: center;
+            justify-content: center;
+                }
+
 
             input {
                 background: #fff;
@@ -55,6 +61,10 @@ export const Container = styled.div `
                 font-size: 20px;
                 font-weight: bold;
                 text-align: center;
+
+                @media(max-width: 988px) {
+                    width: 100vw;
+                }
             }
 
             button {
@@ -65,6 +75,7 @@ export const Container = styled.div `
                 font-size: 20px;
                 font-weight: bold;
                 text-align: center;
+                
             }
         }
     }
