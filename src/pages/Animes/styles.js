@@ -44,8 +44,9 @@ export const Container = styled.div `
 
             @media(max-width: 988px) {
                 display: flex;
-            align-self: center;
-            justify-content: center;
+                flex-direction: column;
+                align-self: center;
+                justify-content: center;
                 }
 
 
