@@ -29,7 +29,7 @@ function AnimeList() {
 
       {animes.map((anime => (
         <List key={anime.id}>
-        <img src={anime.attributes.posterImage.original} alt=""/>
+        <img src={anime.attributes.posterImage.original} alt="Anime Poster"/>
         <div>
         <h1>{anime.attributes.canonicalTitle}</h1>
         <h2>Rating Rank: <span>{anime.attributes.ratingRank}</span></h2>
