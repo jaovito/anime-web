@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Menu disabled/>
+      <Menu disabled dark/>
 
       <Container className="container">
       {templates.map((template => (
